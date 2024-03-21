@@ -17,7 +17,7 @@ app.get('/', (req, res)=>{
     res.json({"text": "hi how are you"})
 })
 
-app.get('/extractText', async (req, res) => {
+app.post('/extractText', async (req, res) => {
     try {
         const base64Image = req.body.image; // Assuming the base64 image is sent as 'image' in the request body
         console.log(base64Image)
