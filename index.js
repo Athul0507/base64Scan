@@ -12,6 +12,11 @@ app.use(express.json()); // Parse JSON request body
 const PORT = process.env.PORT || 3000;
 
 // API endpoint for text extraction from base64 image
+
+app.get('/', (req, res)=>{
+    res.json({"text": "hi how are you"})
+})
+
 app.post('/extract-text', async (req, res) => {
     try {
         const base64Image = req.body.image; // Assuming the base64 image is sent as 'image' in the request body
