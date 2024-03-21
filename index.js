@@ -55,15 +55,7 @@ async function findMedicineInfo(name){
     const model = genAI.getGenerativeModel({ model: "gemini-pro"});
 
     const prompt = `You are a medicine pharmacy expert. ${name} is the medicine I want information about. Give me the information in this format.
-    {
-        "name": "MedicineName",
-        "usage": "What the medicine is used for",
-        "dosage": {
-          "amount": "Dosage amount",
-          "unit": "Dosage unit (e.g., mg, mL)"
-        },
-        "avoid": "When the medicine should be avoided (e.g., contraindications)"
-      }
+    {"name": "MedicineName","usage": "What the medicine is used for","dosage": {"amount": "Dosage amount","unit": "Dosage unit (e.g., mg, mL)"},"avoid": "When the medicine should be avoided (e.g., contraindications)"}
       
     For avoid, include other unfavorable reactions with other medicines, possible allergies, lifestyles, and other information, but use only keywords not sentences. Let usage be short phrases. strictly follow the format for the answer. Let response be plain json in single line without \\n or any other such special characters
     `
