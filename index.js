@@ -65,7 +65,7 @@ async function findMedicineInfo(name){
         "avoid": "When the medicine should be avoided (e.g., contraindications)"
       }
       
-    For avoid, include other unfavorable reactions with other medicines, possible allergies, lifestyles, and other information, but use only keywords not sentences. Let usage be sentences. strictly follow the format for the answer
+    For avoid, include other unfavorable reactions with other medicines, possible allergies, lifestyles, and other information, but use only keywords not sentences. Let usage be short phrases. strictly follow the format for the answer. Let response be plain json in single line without \\n or any other such special characters
     `
 
     const result = await model.generateContent(prompt);
